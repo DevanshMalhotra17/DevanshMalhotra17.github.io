@@ -4,28 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Devansh Malhotra</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Devansh Malhotra</h1>
-        <p>Welcome to my personal website</p>
+        <div class="container header-container">
+            <img src="assets/profile.jpg" alt="Devansh Malhotra" class="profile-pic">
+            <h1>Devansh Malhotra</h1>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section>
+    <main class="container">
+        <section id="about">
             <h2>About Me</h2>
-            <p>I'm a high school student interested in AI, programming, and technology.</p>
+            <p>I'm a high school student passionate about AI, programming, and cybersecurity. I enjoy creating projects that combine innovation with real-world usefulness.</p>
         </section>
 
-        <section>
+        <section id="projects">
             <h2>Projects</h2>
             <ul>
-                <li>AI ProductFinder</li>
-                <li>Jeff - Discord bot</li>
+                <li>
+                    <strong>AI ProductFinder:</strong> An intelligent product recommendation platform with AI-driven insights and community features. 
+                    <strong>Check it out: <a href="https://jitterfreejammers.streamlit.app/">AI ProductFinder</a></strong>
+                </li>
+                <li>
+                    <strong>HackPHS Plant Monitor:</strong> A smart plant monitor using microcontrollers and a Raspberry Pi that tracks soil moisture and light, providing AI-generated tips for plant care.
+                </li>
             </ul>
         </section>
 
-        <section>
+        <section id="contact">
             <h2>Contact</h2>
             <p>Email: <a href="mailto:devanshmalhotra17@gmail.com">devanshmalhotra17@gmail.com</a></p>
             <p>LinkedIn: <a href="https://www.linkedin.com/in/devansh-malhotra-825789314/">Devansh Malhotra</a></p>
@@ -34,7 +47,9 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 Devansh Malhotra</p>
+        <div class="container">
+            <p>&copy; 2025 Devansh Malhotra</p>
+        </div>
     </footer>
 </body>
 </html>
