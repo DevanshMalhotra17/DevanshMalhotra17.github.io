@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Devansh Malhotra</title>
+  <link rel="icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 class="logo">Devansh Malhotra</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="devlog.html" class="active">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section id="devlog">
+    <h2>Devlog</h2>
+    <div id="blog-list"></div>
+  </section>
+
+  <footer>
+    <p>© 2025 Devansh Malhotra</p>
+  </footer>
+
+  <script src="blog-data.js"></script>
+  <script>
+    // Wait for DOM to load
+    document.addEventListener('DOMContentLoaded', function() {
+      // Generate blog post previews
+      const blogList = document.getElementById('blog-list');
+      
+      if (typeof blogPosts !== 'undefined') {
+        blogPosts.forEach(post => {
+          const article = document.createElement('article');
+          article.className = 'devlog-preview';
+          article.innerHTML = `
+            <a href="post.html?id=${post.id}">
+              <h3>${post.title}</h3>
+              <p class="devlog-subtitle">${post.subtitle}</p>
+            </a>
+          `;
+          blogList.appendChild(article);
+        });
+      } else {
+        blogList.innerHTML = '<p style="color: #aaa; text-align: center;">No blog posts found. Make sure blog-data.js is loaded.</p>';
+      }
+    });
+  </script>
+</body>
+</html>

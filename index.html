@@ -1,55 +1,88 @@
+
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Devansh Malhotra</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Devansh Malhotra | Portfolio</title>
+  <link rel="icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="container header-container">
-            <img src="assets/profile.jpg" alt="Devansh Malhotra" class="profile-pic">
-            <h1>Devansh Malhotra</h1>
-            <nav>
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </div>
-    </header>
+  <header>
+    <h1 class="logo">Devansh Malhotra</h1>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="devlog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-    <main class="container">
-        <section id="about">
-            <h2>About Me</h2>
-            <p>I'm a high school student passionate about AI, programming, and cybersecurity. I enjoy creating projects that combine innovation with real-world usefulness.</p>
-        </section>
+  <section id="hero">
+    <img src="assets/profile.jpg" alt="Devansh Malhotra" class="profile-pic">
+    <div class="hero-text">
+      <h2>Hi, I'm Devansh</h2>
+      <p>Student, developer, and AI enthusiast exploring cybersecurity and creative tech.</p>
+      <a href="projects.html" class="btn">See My Work</a>
+    </div>
+  </section>
 
-        <section id="projects">
-            <h2>Projects</h2>
-            <ul>
-                <li>
-                    <strong>AI ProductFinder:</strong> An intelligent product recommendation platform with AI-driven insights and community features. 
-                    <strong>Check it out: <a href="https://jitterfreejammers.streamlit.app/">AI ProductFinder</a></strong>
-                </li>
-                <li>
-                    <strong>HackPHS Plant Monitor:</strong> A smart plant monitor using microcontrollers and a Raspberry Pi that tracks soil moisture and light, providing AI-generated tips for plant care.
-                </li>
-            </ul>
-        </section>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I'm passionate about building meaningful, intelligent, and secure digital experiences.  
+      I love exploring the intersection of <strong>AI</strong> and <strong>cybersecurity</strong>, 
+      experimenting with code, robotics, and technologies that make life smarter and safer.
+      Outside of programming, I write articles for <em>News India Times</em>, tutor through <em>ENGin</em>, 
+      and run a tech newsletter called <strong>CyberSyntax</strong>.
+    </p>
+  </section>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:devanshmalhotra17@gmail.com">devanshmalhotra17@gmail.com</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/devansh-malhotra-825789314/">Devansh Malhotra</a></p>
-            <p>GitHub: <a href="https://github.com/DevanshMalhotra17">DevanshMalhotra17</a></p>
-        </section>
-    </main>
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>Programming</h3>
+        <p>Experience in Python, Java, and JavaScript building AI-powered applications and web development.</p>
+      </div>
+      <div class="skill-card">
+        <h3>AI & Machine Learning</h3>
+        <p>Working with APIs like Gemini and Claude to build intelligent automation tools.</p>
+      </div>
+      <div class="skill-card">
+        <h3>Cybersecurity</h3>
+        <p>Exploring cryptography, secure systems, and privacy-focused development practices.</p>
+      </div>
+      <div class="skill-card">
+        <h3>Writing & Communication</h3>
+        <p>Publishing articles for News India Times and running the CyberSyntax tech newsletter.</p>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Devansh Malhotra</p>
-        </div>
-    </footer>
+  <section id="working-on">
+    <h2>What I'm Working On</h2>
+    <div class="working-grid">
+      <div class="working-card">
+        <h3>Jeff</h3>
+        <p>AI-powered Discord bot for daily standups and team productivity</p>
+      </div>
+      <div class="working-card">
+        <h3>MailMate</h3>
+        <p>AI email assistant to simplify inbox management</p>
+      </div>
+      <div class="working-card">
+        <h3>Portfolio Site</h3>
+        <p>Building this website to showcase projects and learnings</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Devansh Malhotra</p>
+  </footer>
 </body>
 </html>

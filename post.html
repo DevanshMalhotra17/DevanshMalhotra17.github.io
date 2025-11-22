@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Post | Devansh Malhotra</title>
+  <link rel="icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 class="logo">Devansh Malhotra</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="devlog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="blog-post" id="post-content">
+    <!-- Content will be loaded dynamically -->
+  </section>
+
+  <footer>
+    <p>© 2025 Devansh Malhotra</p>
+  </footer>
+
+  <script src="blog-data.js"></script>
+  <script>
+    // Wait for DOM to load
+    document.addEventListener('DOMContentLoaded', function() {
+      // Get post ID from URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const postId = urlParams.get('id');
+      
+      if (typeof blogPosts === 'undefined') {
+        document.getElementById('post-content').innerHTML = `
+          <a href="devlog.html" class="back-link">← Back to Blog</a>
+          <h1>Error Loading Post</h1>
+          <p>Make sure blog-data.js is in the same folder as this file.</p>
+        `;
+        return;
+      }
+      
+      // Find the post
+      const post = blogPosts.find(p => p.id === postId);
+      
+      if (post) {
+        // Update page title
+        document.title = `${post.title} | Devansh Malhotra`;
+        
+        // Generate post content
+        const postContent = document.getElementById('post-content');
+        postContent.innerHTML = `
+          <a href="devlog.html" class="back-link">← Back to Blog</a>
+          
+          <h1>${post.title}</h1>
+          
+          <div class="post-meta">
+            <p><strong>Devansh Malhotra</strong></p>
+            <ul class="meta-info">
+              <li><strong>Created:</strong> ${post.created}</li>
+              <li><strong>Updated:</strong> ${post.updated}</li>
+              <li><strong>Categories:</strong> ${post.categories.join(', ')}</li>
+              <li><strong>Read time:</strong> ${post.readTime}</li>
+            </ul>
+          </div>
+
+          <div class="post-content">
+            ${post.content}
+          </div>
+        `;
+      } else {
+        // Post not found
+        document.getElementById('post-content').innerHTML = `
+          <a href="devlog.html" class="back-link">← Back to Blog</a>
+          <h1>Post Not Found</h1>
+          <p>Sorry, the blog post you're looking for doesn't exist.</p>
+        `;
+      }
+    });
+  </script>
+</body>
+</html>
